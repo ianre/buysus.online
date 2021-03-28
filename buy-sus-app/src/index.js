@@ -10,13 +10,12 @@ import Login from "./pages/Login";
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
+
   <BrowserRouter>
-   <Switch>
-    <Route exact path="/" component={Main} />
-    <Route path="/login" component={Login} />
-  </Switch>
+   <Route path="/" component={Main} />
   </BrowserRouter>,
   rootElement
+
 );
 /* ReactDOM.render(
   <React.StrictMode>

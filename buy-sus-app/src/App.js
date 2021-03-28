@@ -15,6 +15,7 @@ import Container from "@material-ui/core/Container";
 import "./App.css";
 
 const AppComponent = lazy(() => import("./pages/Main"));
+const LoginComponent = lazy(() => import("./pages/Login"));
 
 const footers = [
   {
@@ -23,11 +24,22 @@ const footers = [
   },
   {
     title: "Features",
-    description: ["Cool stuff", "Random feature", "Team feature", "Developer stuff", "Another one",],
+    description: [
+      "Cool stuff",
+      "Random feature",
+      "Team feature",
+      "Developer stuff",
+      "Another one",
+    ],
   },
   {
     title: "Resources",
-    description: ["Resource", "Resource name", "Another resource", "Final resource", ],
+    description: [
+      "Resource",
+      "Resource name",
+      "Another resource",
+      "Final resource",
+    ],
   },
   {
     title: "Legal",
@@ -109,13 +121,20 @@ export default function App() {
         >
           <Toolbar className={classes.toolbar}>
             <Typography
-              variant="h6"
+              variant="h5"
               color="inherit"
               noWrap
               className={classes.toolbarTitle}
             >
-              Buy <b>Sus</b>tainable!🌱
+              <Link
+                color="textPrimary"
+                href="/#"
+                className={classes.link}
+              >
+                Buy <b>Sus</b>tainable!🌱
+              </Link>
             </Typography>
+
             <nav>
               <Link
                 variant="button"
@@ -128,7 +147,7 @@ export default function App() {
               <Link
                 variant="button"
                 color="textPrimary"
-                href="#"
+                href="/enterprise"
                 className={classes.link}
               >
                 Enterprise
@@ -136,33 +155,35 @@ export default function App() {
               <Link
                 variant="button"
                 color="textPrimary"
-                href="#"
+                href="/support"
                 className={classes.link}
               >
                 Support
               </Link>
             </nav>
-            <Link to="/pages/login"><Button
-              href="#"
-              color="primary"
-              variant="outlined"
-              className={classes.link}
-            >
-              Login
-            </Button>
+            <Link>
+              {" "}
+              <Button
+                href="/login"
+                color="primary"
+                variant="outlined"
+                className={classes.link}
+              >
+                Login
+              </Button>
             </Link>
           </Toolbar>
         </AppBar>
 
-
         <Switch>
-          <Route path="/locations">
-            <AppComponent />
+          <Route exact path="/login">
+            <LoginComponent />
           </Route>
-          <Route path="">
+          <Route path="/">
             <AppComponent />
           </Route>
         </Switch>
+
         <Container maxWidth="md" component="footer" className={classes.footer}>
           <Grid container spacing={4} justify="space-evenly">
             {footers.map((footer) => (
