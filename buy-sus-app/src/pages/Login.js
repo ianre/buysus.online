@@ -11,7 +11,7 @@ class Login extends PureComponent {
   state = {};
   componentDidMount() {};
   doSomething = () => {};
-  
+
   render() {
     const { classes } = this.props;
 
@@ -31,7 +31,9 @@ class Login extends PureComponent {
             variant="contained">
             View My Points History
           </Button>
-
+          
+          <p></p>
+          
           <TextField
             label="Search For Sustainable Products"
             variant="outlined"
