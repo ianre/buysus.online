@@ -13,6 +13,7 @@ import logo from "../logo.svg";
 import hand from "../res/hand.png";
 import CPF from "../res/CPF.png";
 import leaf from "../res/leaves.png";
+import Amazon from "../res/amazon.png";
 import TextField from "@material-ui/core/TextField";
 import { Link } from "react-router-dom";
 import { ReactTinyLink } from "react-tiny-link";
@@ -64,6 +65,11 @@ export default function CenteredGrid() {
               Climate Pledge Friendly recognizes products with improvements in
               at least one aspect of sustainability.
             </Typography>
+            <br></br>
+            <br></br>
+            <Typography variant="h5">Search for: <b>Sustainable Household Items</b></Typography>
+            <hr></hr>
+            <img src={Amazon} className="Amazon" alt="logo" />
           </Paper>
         </Grid>
         <Grid item lg={4} md={12} xs={12} sm={12}>
