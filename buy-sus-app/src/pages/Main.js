@@ -24,13 +24,8 @@ class Main extends PureComponent {
           <p>Don't be sus!</p>
           <p>Buy sustainable products</p>
           <hr></hr>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn Reacts
+          <a className="App-link" href="https://youtu.be/pxIofYrt0kE" target="_blank" rel="noopener noreferrer">
+            Learn How =={">"}
           </a>
         </header>
       </div>
