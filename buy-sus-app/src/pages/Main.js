@@ -4,6 +4,7 @@ import { withStyles } from "@material-ui/core";
 import logo from '../logo.svg';
 import hand from '../res/hand.png';
 import leaf from '../res/leaves.png';
+import TextField from '@material-ui/core/TextField';
 
 class Main extends PureComponent {
   state = {};
@@ -21,8 +22,14 @@ class Main extends PureComponent {
           */}
           <img src={leaf} className="Spin-move" alt="logo" />
           <img src={hand} className="Hand" alt="logo" />
-          <p>Don't be sus!</p>
-          <p>Buy sustainable products</p>
+          <p>Don't be sus! <br /> Buy sustainable products</p>
+
+          <TextField
+            label="Search For Sustainable Products"
+            variant="outlined"
+            InputProp={{type: 'search'}}
+          />
+          
           <hr></hr>
           <a className="App-link" href="https://youtu.be/pxIofYrt0kE" target="_blank" rel="noopener noreferrer">
             Learn How =={">"}
