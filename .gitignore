@@ -13,6 +13,8 @@ buy-sus-app/node_modules
 
 # production
 /build
+# i forget
+/buy-sus-app/build
 
 # misc
 .DS_Store
