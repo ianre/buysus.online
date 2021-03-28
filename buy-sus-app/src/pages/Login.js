@@ -33,7 +33,6 @@ class Login extends PureComponent {
           </Button>
           
           <p></p>
-          
           <TextField
             label="Search For Sustainable Products"
             variant="outlined"
