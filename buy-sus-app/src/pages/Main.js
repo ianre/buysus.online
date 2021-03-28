@@ -14,7 +14,8 @@ import hand from "../res/hand.png";
 import CPF from "../res/CPF.png";
 import leaf from "../res/leaves.png";
 import TextField from "@material-ui/core/TextField";
-import {Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import { ReactTinyLink } from "react-tiny-link";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -45,7 +46,7 @@ export default function CenteredGrid() {
         Buy <b>Sus</b>tainable Products
       </Typography>
       <Grid container spacing={3}>
-        <Grid item lg={8} md={12} >
+        <Grid item lg={8} md={12}>
           <Paper className={classes.paper}>
             <Typography variant="h5">How can I buy sustainably?</Typography>
             <hr></hr>
@@ -76,7 +77,7 @@ export default function CenteredGrid() {
             </Box>
           </Paper>
         </Grid>
-        <Grid item xs={12} >
+        <Grid item xs={12}>
           <Paper className={classes.paperGreen}>
             <Typography variant="h5">
               As online shoppers, it is vital to understand the impact of the
@@ -96,6 +97,7 @@ export default function CenteredGrid() {
             </Typography>
           </Paper>
         </Grid>
+
       </Grid>
     </div>
   );

@@ -8,7 +8,9 @@ import Button from "@material-ui/core/Button";
 import Toolbar from "@material-ui/core/Toolbar";
 import Link from "@material-ui/core/Link";
 import logo from "./logo.svg";
-import { makeStyles } from "@material-ui/core/styles";
+import InputBase from '@material-ui/core/InputBase';
+import { makeStyles, fade } from "@material-ui/core/styles";
+import SearchIcon from '@material-ui/icons/Search';
 
 import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
@@ -55,6 +57,45 @@ const useStyles = makeStyles((theme) => ({
       listStyle: "none",
     },
   },
+  search: {
+    flexGrow: 1,
+    position: 'relative',
+    borderRadius: theme.shape.borderRadius,
+    backgroundColor: fade( "#BEF5B3", 0.15),
+    '&:hover': {
+      backgroundColor: fade("#BEF5B3", 0.25),
+    },
+    marginRight: theme.spacing(2),
+    marginLeft: 0,
+    width: '100%',
+    [theme.breakpoints.up('sm')]: {
+      marginLeft: theme.spacing(3),
+      width: 'auto',
+    },
+  },
+  searchIcon: {
+    padding: theme.spacing(0, 2),
+    height: '100%',
+    position: 'absolute',
+    pointerEvents: 'none',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  inputRoot: {
+    color: 'inherit',
+  },
+  inputInput: {
+    padding: theme.spacing(1, 1, 1, 0),
+    // vertical padding + font size from searchIcon
+    paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
+    transition: theme.transitions.create('width'),
+    width: '100%',
+    [theme.breakpoints.up('md')]: {
+      width: '20ch',
+    },
+  },
+
   appBar: {
     borderBottom: `1px solid ${theme.palette.divider}`,
   },
@@ -126,14 +167,24 @@ export default function App() {
               noWrap
               className={classes.toolbarTitle}
             >
-              <Link
-                color="textPrimary"
-                href="/#"
-                className={classes.link}
-              >
+              <Link color="textPrimary" href="/#" className={classes.link}>
                 Buy <b>Sus</b>tainable!🌱
               </Link>
             </Typography>
+
+            <div className={classes.search}>
+              <div className={classes.searchIcon}>
+                <SearchIcon />
+              </div>
+              <InputBase
+                placeholder="Search…"
+                classes={{
+                  root: classes.inputRoot,
+                  input: classes.inputInput,
+                }}
+                inputProps={{ "aria-label": "search" }}
+              />
+            </div>
 
             <nav>
               <Link
