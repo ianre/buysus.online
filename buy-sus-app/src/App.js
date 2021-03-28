@@ -7,11 +7,11 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Don't be sus! 
+          Don't be sus!
         </p>
-        
+
         <p>
-        Buy sustainable products
+          Buy sustainable products
         </p>
         <hr></hr>
         <a
