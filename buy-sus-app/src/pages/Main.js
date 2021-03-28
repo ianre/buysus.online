@@ -31,8 +31,8 @@ class Main extends PureComponent {
           />
           
           <hr></hr>
-          <a className="App-link" href="https://youtu.be/pxIofYrt0kE" target="_blank" rel="noopener noreferrer">
-            Learn How =={">"}
+          <a className="App-link" href="https://www.amazon.com/b?node=21221608011" target="_blank" rel="noopener noreferrer">
+            Learn More =={">"}
           </a>
         </header>
       </div>
