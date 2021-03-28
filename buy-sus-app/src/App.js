@@ -142,7 +142,7 @@ export default function App() {
                 Support
               </Link>
             </nav>
-            <Button
+            <Link to="/pages/login"><Button
               href="#"
               color="primary"
               variant="outlined"
@@ -150,6 +150,7 @@ export default function App() {
             >
               Login
             </Button>
+            </Link>
           </Toolbar>
         </AppBar>
 
