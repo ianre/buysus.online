@@ -23,22 +23,11 @@ const footers = [
   },
   {
     title: "Features",
-    description: [
-      "Cool stuff",
-      "Random feature",
-      "Team feature",
-      "Developer stuff",
-      "Another one",
-    ],
+    description: ["Cool stuff", "Random feature", "Team feature", "Developer stuff", "Another one",],
   },
   {
     title: "Resources",
-    description: [
-      "Resource",
-      "Resource name",
-      "Another resource",
-      "Final resource",
-    ],
+    description: ["Resource", "Resource name", "Another resource", "Final resource", ],
   },
   {
     title: "Legal",
@@ -125,7 +114,7 @@ export default function App() {
               noWrap
               className={classes.toolbarTitle}
             >
-              Buy Sus
+              Buy <b>Sus</b>tainable!🌱
             </Typography>
             <nav>
               <Link
@@ -163,6 +152,8 @@ export default function App() {
             </Button>
           </Toolbar>
         </AppBar>
+
+
         <Switch>
           <Route path="/locations">
             <AppComponent />
