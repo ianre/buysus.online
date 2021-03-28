@@ -1,5 +1,8 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+buy-sus-app/package-lock.json
+buy-sus-app/node_modules
+
 # dependencies
 /sus-scraper/node_modules
 /.pnp
@@ -22,4 +25,4 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-/sus-scraper/package-lock.json
+sus-scraper/package-lock.json
